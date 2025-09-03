@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grey’s Woodworking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #3e2723;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      background: #5d4037;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin-top: 0.5rem;
+    }
+    .price {
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #3e2723;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #5d4037;
+    }
+    footer {
+      background: #3e2723;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Grey’s Woodworking</h1>
+    <p>Handcrafted in New Zealand • Custom Projects • Unique Designs</p>
+  </header>
+
+  <nav>
+    <a href="#showroom">Showroom</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container" id="showroom">
+    <h2>🪵 Showroom</h2>
+    <div class="grid">
+      <!-- Product 1 -->
+      <div class="card">
+        <img src="images/olive-bowl.jpg" alt="Olive Bowl">
+        <h3>Hand-Turned Olive Bowl</h3>
+        <p>Made from rescued olive wood, smooth finish, perfect for serving or display.</p>
+        <p class="price">$120 NZD</p>
+        <a href="https://www.paypal.com/buy-now-link" class="btn">Buy Now</a>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="card">
+        <img src="images/kowhai-table.jpg" alt="Kowhai Table">
+        <h3>Kowhai Coffee Table</h3>
+        <p>Rustic coffee table crafted from native NZ Kowhai. Natural edges preserved.</p>
+        <p class="price">$450 NZD</p>
+        <a href="https://www.paypal.com/buy-now-link" class="btn">Buy Now</a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="card">
+        <img src="images/rustic-shelf.jpg" alt="Rustic Shelf">
+        <h3>Rustic Wall Shelf</h3>
+        <p>Handmade shelf with a raw timber look. Great for books or decor.</p>
+        <p class="price">$90 NZD</p>
+        <a href="https://www.paypal.com/buy-now-link" class="btn">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="about">
+    <h2>About</h2>
+    <p>I’m Grey, a passionate woodworker based in New Zealand. I specialize in creating unique, functional, and timeless pieces from locally sourced hardwoods like Olive and Kowhai. Each piece is crafted by hand, ensuring no two are alike.</p>
+  </div>
+
+  <div class="container" id="contact">
+    <h2>Contact</h2>
+    <p>Interested in a custom order or have questions?</p>
+    <p>Email me at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Grey’s Woodworking • Handcrafted in NZ</p>
+  </footer>
+</body>
+</html>
