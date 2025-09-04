@@ -3,191 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grey’s Woodworking</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
+  <title>G.M Handmade - Woodcrafts</title>
   <style>
     body {
-      <header style="text-align: center; padding: 20px; background: #f4f4f4; border-bottom: 2px solid #ccc;">
-  <img src="logo.jpeg" alt="G.M Handmade Logo" style="max-width: 180px; height: auto;">
-  <h1 style="font-family: 'Georgia', serif; margin-top: 10px; color: #2c2c2c;">G.M Handmade</h1>
-  <p style="font-size: 1.2em; color: #555;">Woodcrafts • Custom Builds • Handmade with Care</p>
-</header>
-
-      font-family: 'Roboto', sans-serif;
       margin: 0;
-      background: #f4f0ec;
-      color: #333;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background: url('oak.jpeg') repeat;
+      background-size: cover;
+      background-color: #f4e3c1;
     }
 
     header {
-      background: url('images/wood-texture.jpg') center/cover no-repeat;
-      color: white;
-      padding: 4rem 1.5rem;
       text-align: center;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.4); /* dark overlay for readability */
-    }
-    header h1, header p {
-      position: relative;
-      z-index: 1;
-    }
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 3px solid #8b5e3c;
     }
 
-    nav {
-      background: #5d4037;
-      display: flex;
-      justify-content: center;
-      padding: 0.75rem;
+    header img {
+      max-width: 180px;
+      height: auto;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-      transition: color 0.3s;
+
+    header h1 {
+      margin: 10px 0 5px 0;
+      font-family: 'Georgia', serif;
+      color: #2c2c2c;
     }
-    nav a:hover {
-      color: #ffcc80;
+
+    header p {
+      font-size: 1.2em;
+      color: #555;
     }
 
     .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      color: #3e2723;
-      margin-bottom: 1rem;
-    }
-
-    /* Product Grid */
-    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    }
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-    .card h3 {
-      margin-top: 0.75rem;
-      color: #4e342e;
-    }
-    .price {
-      font-weight: bold;
-      margin: 0.5rem 0;
-      color: #6d4c41;
-    }
-    .btn {
-      display: inline-block;
-      background: #8d6e63;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background: #6d4c41;
+      padding: 30px;
     }
 
-    footer {
-      background: #3e2723;
-      color: white;
+    .card {
+      background: #fffdf7;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+    }
+
+    .card-content h3 {
+      margin: 10px 0;
+      color: #3e2c1c;
+    }
+
+    .card-content p {
+      color: #555;
+      font-size: 0.95em;
+    }
+
+    .card-content button {
+      margin-top: 12px;
+      background: url('olive.jpeg') repeat;
+      background-size: cover;
+      background-color: #708238;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card-content button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Grey’s Woodworking</h1>
-    <p>Handcrafted in New Zealand • Custom Projects • Unique Designs</p>
+    <img src="logo.jpeg" alt="G.M Handmade Logo">
+    <h1>G.M Handmade</h1>
+    <p>Woodcrafts • Custom Builds • Handmade with Care</p>
   </header>
 
-  <nav>
-    <a href="#showroom">Showroom</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="container" id="showroom">
-    <h2>🪵 Showroom</h2>
-    <div class="grid">
-      <!-- Product 1 -->
-      <div class="card">
-        <img src="images/olive-bowl.jpg" alt="Olive Bowl">
-        <h3>Hand-Turned Olive Bowl</h3>
-        <p>Made from rescued olive wood, smooth finish, perfect for serving or display.</p>
-        <p class="price">$120 NZD</p>
-        <a href="#" class="btn">Buy Now</a>
-      </div>
-
-      <!-- Product 2 -->
-      <div class="card">
-        <img src="images/kowhai-table.jpg" alt="Kowhai Table">
-        <h3>Kowhai Coffee Table</h3>
-        <p>Rustic coffee table crafted from native NZ Kowhai. Natural edges preserved.</p>
-        <p class="price">$450 NZD</p>
-        <a href="#" class="btn">Buy Now</a>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="card">
-        <img src="images/rustic-shelf.jpg" alt="Rustic Shelf">
-        <h3>Rustic Wall Shelf</h3>
-        <p>Handmade shelf with a raw timber look. Great for books or decor.</p>
-        <p class="price">$90 NZD</p>
-        <a href="#" class="btn">Buy Now</a>
+  <main class="container">
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=1" alt="Woodwork project">
+      <div class="card-content">
+        <h3>Oak Coffee Table</h3>
+        <p>Handmade oak table with a natural finish.</p>
+        <button>Buy Now</button>
       </div>
     </div>
-  </div>
 
-  <div class="container" id="about">
-    <h2>About</h2>
-    <p>I’m Grey, a passionate woodworker based in New Zealand. I specialize in creating unique, functional, and timeless pieces from locally sourced hardwoods like Olive and Kowhai. Each piece is crafted by hand, ensuring no two are alike.</p>
-  </div>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=2" alt="Woodwork project">
+      <div class="card-content">
+        <h3>Rustic Wooden Bowl</h3>
+        <p>Turned from local New Zealand wood, food-safe finish.</p>
+        <button>Buy Now</button>
+      </div>
+    </div>
 
-  <div class="container" id="contact">
-    <h2>Contact</h2>
-    <p>Interested in a custom order or have questions?</p>
-    <p>Email me at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Grey’s Woodworking • Handcrafted in NZ</p>
-  </footer>
+    <div class="card">
+      <img src="https://picsum.photos/400/300?random=3" alt="Woodwork project">
+      <div class="card-content">
+        <h3>Custom Bookshelf</h3>
+        <p>Perfect fit for any space. Custom sizes available.</p>
+        <button>Buy Now</button>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
