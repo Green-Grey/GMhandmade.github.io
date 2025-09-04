@@ -4,41 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grey’s Woodworking</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
-      background: #f9f9f9;
+      background: #f4f0ec;
       color: #333;
+      line-height: 1.6;
     }
+
     header {
-      background: #3e2723;
+      background: url('images/wood-texture.jpg') center/cover no-repeat;
       color: white;
-      padding: 1.5rem;
+      padding: 4rem 1.5rem;
       text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4); /* dark overlay for readability */
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
     }
     header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
       margin: 0;
     }
+    header p {
+      font-size: 1.2rem;
+    }
+
     nav {
       background: #5d4037;
       display: flex;
       justify-content: center;
-      padding: 0.5rem;
+      padding: 0.75rem;
     }
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #ffcc80;
     }
+
     .container {
       max-width: 1100px;
       margin: auto;
       padding: 2rem;
     }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #3e2723;
+      margin-bottom: 1rem;
+    }
+
+    /* Product Grid */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -46,34 +80,42 @@
     }
     .card {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 1rem;
       text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
     .card img {
       max-width: 100%;
-      border-radius: 8px;
+      border-radius: 10px;
     }
     .card h3 {
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
+      color: #4e342e;
     }
     .price {
       font-weight: bold;
       margin: 0.5rem 0;
+      color: #6d4c41;
     }
     .btn {
       display: inline-block;
-      background: #3e2723;
+      background: #8d6e63;
       color: white;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 5px;
       text-decoration: none;
       transition: background 0.3s;
     }
     .btn:hover {
-      background: #5d4037;
+      background: #6d4c41;
     }
+
     footer {
       background: #3e2723;
       color: white;
@@ -104,7 +146,7 @@
         <h3>Hand-Turned Olive Bowl</h3>
         <p>Made from rescued olive wood, smooth finish, perfect for serving or display.</p>
         <p class="price">$120 NZD</p>
-        <a href="https://www.paypal.com/buy-now-link" class="btn">Buy Now</a>
+        <a href="#" class="btn">Buy Now</a>
       </div>
 
       <!-- Product 2 -->
@@ -113,7 +155,7 @@
         <h3>Kowhai Coffee Table</h3>
         <p>Rustic coffee table crafted from native NZ Kowhai. Natural edges preserved.</p>
         <p class="price">$450 NZD</p>
-        <a href="https://www.paypal.com/buy-now-link" class="btn">Buy Now</a>
+        <a href="#" class="btn">Buy Now</a>
       </div>
 
       <!-- Product 3 -->
@@ -122,7 +164,7 @@
         <h3>Rustic Wall Shelf</h3>
         <p>Handmade shelf with a raw timber look. Great for books or decor.</p>
         <p class="price">$90 NZD</p>
-        <a href="https://www.paypal.com/buy-now-link" class="btn">Buy Now</a>
+        <a href="#" class="btn">Buy Now</a>
       </div>
     </div>
   </div>
